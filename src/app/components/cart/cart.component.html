@@ -1,0 +1,26 @@
+<section class="h-full">
+  <h1 class="text-5xl mb-8">Cart</h1>
+  <div class="grid grid-cols-4 gap-8">
+    <div class="product-box" *ngFor="let product of products">
+      <app-item [item]="product"></app-item>
+      <div class="w-full flex justify-end">
+        <button class="text-end pb-4 pr-4" (click)="onDelete(product.id)">
+          Delete product from cart
+        </button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="products.length === 0" class="mt-16 flex justify-center flex-col">
+    <p class="text-4xl text-center empty-cart-paragraph">
+      Your cart is empty go fill it!
+    </p>
+    <div class="self-center mt-4">
+      <button (click)="goToProducts()" class="btn">Return to shopping</button>
+    </div>
+  </div>
+  <div *ngIf="products.length > 0" class="mt-16 flex justify-center flex-col">
+    <div class="self-center mt-4">
+      <button (click)="goToCheckout()" class="btn">Go to checkout!</button>
+    </div>
+  </div>
+</section>

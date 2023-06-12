@@ -1,0 +1,11 @@
+<div class="w-full">
+  <div class="flex justify-center">
+    <img [src]="itemInfo.imgSource" class="img" />
+  </div>
+  <div class="p-4">
+    <h2 class="text-3xl">{{ itemInfo.name }}</h2>
+    <p>{{ itemInfo.description }}</p>
+    <p class="font-bold">{{ itemInfo.price }}$</p>
+    <p *ngIf="itemInfo.amount">Amount: {{ itemInfo.amount }}</p>
+  </div>
+</div>

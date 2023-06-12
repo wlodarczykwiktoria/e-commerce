@@ -1,0 +1,5 @@
+{
+  "/users*": "/users$1",
+  "/carts*": "/carts$1",
+  "/orders*": "/orders$1"
+}

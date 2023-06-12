@@ -1,0 +1,97 @@
+<section class="h-full">
+  <h1 class="text-5xl mb-8">Summary</h1>
+  <div class="flex justify-center">
+    <div class="products mr-4">
+      <h2 class="mb-4 pl-4 text-4xl mt-20">Products</h2>
+      <div class="product-box" *ngFor="let product of products">
+        <div class="p-4">
+          <h2 class="text-3xl">{{ product.name }}</h2>
+          <p class="font-bold">{{ product.price }}$</p>
+          <p *ngIf="product.amount">Amount: {{ product.amount }}</p>
+        </div>
+      </div>
+      <div class="p-4 text-end mt-auto h-auto">
+        <p class="text-4xl">Total: {{ total }}$</p>
+      </div>
+
+      <div class="info-box">
+        <h2 class="mb-12 pl-4 text-4xl">Information for shipping/payment</h2>
+        <form class="p-4" [formGroup]="checkoutForm">
+          <div class="checkout-box">
+            <input
+              formControlName="name"
+              type="text"
+              required="true"
+              id="Name"
+            />
+            <label for="name">Name</label>
+          </div>
+          <div class="checkout-box">
+            <input
+              formControlName="surname"
+              type="text"
+              id="surname"
+              required="true"
+            />
+
+            <label for="surname">Surname</label>
+          </div>
+          <div class="checkout-box">
+            <input
+              formControlName="address"
+              type="text"
+              id="address"
+              required="true"
+            />
+
+            <label for="address">Address</label>
+          </div>
+          <div class="checkout-box">
+            <input
+              formControlName="apartment"
+              type="number"
+              id="apartment"
+              required="true"
+            />
+
+            <label for="apartment">Apartment</label>
+          </div>
+          <div class="checkout-box">
+            <input
+              formControlName="zipcode"
+              type="text"
+              id="zipcode"
+              required="true"
+            />
+
+            <label for="zipcode">Zip code</label>
+          </div>
+          <div class="checkout-box">
+            <input
+              formControlName="city"
+              type="text"
+              id="city"
+              required="true"
+            />
+            <label for="city">City</label>
+          </div>
+          <div class="checkout-box">
+            <input
+              formControlName="phoneNumber"
+              type="number"
+              id="phoneNumber"
+              required="true"
+            />
+
+            <label for="phoneNumber">Phone number</label>
+          </div>
+        </form>
+        <div class="btn-box">
+          <button class="btn" (click)="sendOrder($event)">
+            Finish payment
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

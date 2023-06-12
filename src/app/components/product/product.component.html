@@ -1,0 +1,13 @@
+<app-item [item]="productInfo"></app-item>
+<div class="text-center">
+  <select
+    #amount
+    [(ngModel)]="selectedValue"
+    (change)="onSelected(amount.value)"
+  >
+    <option *ngFor="let option of options; index as i">
+      {{ option.value }}
+    </option>
+  </select>
+  <button class="pb-4" (click)="addToCart()">Add to cart</button>
+</div>

@@ -1,0 +1,53 @@
+<section class="h-full">
+  <h1 class="text-5xl mb-8">My orders</h1>
+  <div class="grid grid-cols-3 gap-8">
+    <ng-container *ngFor="let order of orders">
+      <div class="p-4 order-box mr-4 h-full">
+        <div class="h-full flex flex-col justify-between">
+          <div class="p-4 h-auto">
+            <h2 class="pt-8 text-4xl mb-4">Products</h2>
+            <div class="mb-4 grid grid-cols-3 gap-4">
+              <ng-container
+                *ngFor="let product of order.orderInformation.products"
+              >
+                <div class="mb-4">
+                  <h2 class="text-3xl">{{ product.name }}</h2>
+                  <p class="font-bold">{{ product.price }}$</p>
+                  <p *ngIf="product.amount">Amount: {{ product.amount }}</p>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+          <div class="h-auto">
+            <h2 class="pt-8 pl-4 text-4xl">Shipping/payment address</h2>
+            <div class="p-4">
+              <p>Name: {{ order.orderInformation.address.name }}</p>
+              <p>Surname: {{ order.orderInformation.address.surname }}</p>
+              <p>Address: {{ order.orderInformation.address.address }}</p>
+              <p *ngIf="order.orderInformation.address.apartment">
+                Apartment: {{ order.orderInformation.address.apartment }}
+              </p>
+              <p>Zip code: {{ order.orderInformation.address.zipcode }}</p>
+              <p>City: {{ order.orderInformation.address.city }}</p>
+              <p>
+                Phone number: {{ order.orderInformation.address.phoneNumber }}
+              </p>
+            </div>
+            <p class="text-4xl text-end">
+              Total: {{ order.orderInformation.total }}$
+            </p>
+            <p class="mt-4 text-end text-4xl">Status: Order accepted</p>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <div *ngIf="orders.length === 0" class="mt-16 flex justify-center flex-col">
+    <p class="text-4xl text-center empty-cart-paragraph">
+      You have not orders yet, go shopping!
+    </p>
+    <div class="self-center mt-4">
+      <button (click)="goToProducts()" class="btn">Return to shopping</button>
+    </div>
+  </div>
+</section>

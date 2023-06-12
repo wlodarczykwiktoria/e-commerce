@@ -1,0 +1,8 @@
+<section>
+  <h1 class="text-5xl mb-8">Products</h1>
+  <div class="grid grid-cols-4 gap-8">
+    <div class="product-box" *ngFor="let product of products">
+      <app-product [product]="product"></app-product>
+    </div>
+  </div>
+</section>

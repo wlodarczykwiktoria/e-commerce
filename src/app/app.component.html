@@ -1,0 +1,24 @@
+<div class="flex flex-col m-8">
+  <nav class="flex justify-between h-16">
+    <div class="flex items-center text-7xl">
+      <h1 class="shop-title">FlexShop</h1>
+    </div>
+    <div class="flex justify-end h-full">
+      <a class="mr-4 text-3xl" routerLink="/login" (click)="logout()">
+        {{ showNavTabs ? "Logout" : "Login" }}
+      </a>
+      <a *ngIf="showNavTabs" class="mr-4 text-3xl" routerLink="/cart"
+        >Cart {{ cartAmount }}</a
+      >
+      <a *ngIf="showNavTabs" class="mr-4 text-3xl" routerLink="/products"
+        >Products</a
+      >
+      <a *ngIf="showNavTabs" class="mr-4 text-3xl" routerLink="/orders"
+        >My orders</a
+      >
+    </div>
+  </nav>
+  <div class="h-full">
+    <router-outlet></router-outlet>
+  </div>
+</div>

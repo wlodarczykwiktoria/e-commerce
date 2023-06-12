@@ -1,0 +1,88 @@
+{
+  "users": [
+    {
+      "email": "test@gmail.com",
+      "password": "$2a$10$pYUyDoPYrghYrcXOQprsBOGhJUBzy3jjk3jhLMPPDsSMD7tvTJXSO",
+      "username": "test123",
+      "id": 1
+    }
+  ],
+  "carts": [
+    {
+      "products": [],
+      "userId": "1",
+      "id": 1
+    }
+  ],
+  "orders": [],
+  "products": {
+    "chairs": [
+      {
+        "productId": "010",
+        "name": "Regular woden chair",
+        "price": 19,
+        "description": "That`s really an amazing chair right there",
+        "imgSource": "./assets/photos/chair-regular.jpg",
+        "id": 10
+      },
+      {
+        "productId": "011",
+        "name": "Old vintage chair",
+        "price": 39,
+        "description": "That`s really an amazing chair right there",
+        "imgSource": "./assets/photos/chair-fancy.jpg",
+        "id": 11
+      },
+      {
+        "productId": "012",
+        "name": "Elegant chair",
+        "price": 59,
+        "description": "That`s really an amazing chair right there",
+        "imgSource": "./assets/photos/chair-fancy-2.jpg",
+        "id": 12
+      },
+      {
+        "productId": "013",
+        "name": "Classic fancy black chair",
+        "price": 79,
+        "description": "That`s really an amazing chair right there",
+        "imgSource": "./assets/photos/chair-fancy-3.jpg",
+        "id": 13
+      }
+    ],
+    "tables": [
+      {
+        "productId": "001",
+        "name": "Regular woden table",
+        "price": 159,
+        "description": "That`s really an amazing table right there",
+        "id": 1,
+        "imgSource": "./assets/photos/table.jpg"
+      },
+      {
+        "productId": "002",
+        "name": "Iron rectangular table",
+        "price": 255,
+        "description": "That`s really an amazing table right there",
+        "id": 2,
+        "imgSource": "./assets/photos/table-fancy.jpg"
+      },
+      {
+        "productId": "003",
+        "name": "Classic woden table",
+        "price": 360,
+        "description": "That`s really an amazing table right there",
+        "id": 3,
+        "imgSource": "./assets/photos/table-fancy-2.jpg"
+      },
+      {
+        "productId": "004",
+        "name": "Office table",
+        "price": 490,
+        "description": "That`s really an amazing table right there",
+        "id": 4,
+        "imgSource": "./assets/photos/table-fancy-3.webp"
+      }
+    ]
+  }
+}

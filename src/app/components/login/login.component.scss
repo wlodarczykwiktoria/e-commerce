@@ -1,0 +1,47 @@
+.login-box {
+  position: relative;
+  padding: 5rem;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  background-color: #eee;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 1rem 0;
+  border: none;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.login-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem 0;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -2.5rem;
+  left: 0;
+}
+
+.btn {
+  width: 100%;
+  padding: 0.5rem;
+  justify-content: center;
+  border-radius: 10rem;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  background-color: #ccc;
+}

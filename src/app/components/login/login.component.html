@@ -1,0 +1,77 @@
+<div class="flex justify-center items-center h-full">
+  <div class="login-box">
+    <ng-container *ngIf="visibleLoginForm">
+      <h1 class="mb-4 text-5xl">Sign in!</h1>
+      <form [formGroup]="loginForm">
+        <div class="user-box">
+          <input
+            formControlName="email"
+            type="email"
+            required="true"
+            id="email"
+          />
+          <label for="email">Email</label>
+        </div>
+        <div class="user-box">
+          <input
+            formControlName="password"
+            type="password"
+            id="password"
+            required="true"
+          />
+
+          <label for="password">Password</label>
+        </div>
+        <div class="btn-box">
+          <button class="btn" (click)="login($event)">Login</button>
+        </div>
+      </form>
+    </ng-container>
+
+    <ng-container *ngIf="!visibleLoginForm">
+      <h1 class="mb-4 text-5xl">Sign up!</h1>
+      <form [formGroup]="registerForm">
+        <div class="user-box">
+          <input
+            formControlName="email"
+            type="email"
+            required="true"
+            id="emailRegister"
+          />
+          <label for="email">Email</label>
+        </div>
+        <div class="user-box">
+          <input
+            formControlName="username"
+            type="text"
+            required="true"
+            id="usernameRegister"
+          />
+          <label for="username">Username</label>
+        </div>
+        <div class="user-box">
+          <input
+            formControlName="password"
+            type="password"
+            id="passwordRegister"
+            required="true"
+          />
+
+          <label for="password">Password</label>
+        </div>
+        <div class="btn-box">
+          <button class="btn" (click)="register($event)">Register</button>
+        </div>
+      </form>
+    </ng-container>
+    <div class="mt-8">
+      <button (click)="changeFormVisibility()">
+        {{
+          visibleLoginForm
+            ? "Don`t have an account yet? Don`t hesitate :)"
+            : "Already have an account? log in!"
+        }}
+      </button>
+    </div>
+  </div>
+</div>
